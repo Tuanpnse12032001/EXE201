@@ -18,10 +18,10 @@ import static com.example.bds.enums.Role.*;
 @SpringBootApplication
 @EnableWebSecurity
 @EnableJpaRepositories
-public class Swd392Application {
+public class EXE201Application {
 
     public static void main(String[] args) {
-        SpringApplication.run(Swd392Application.class, args);
+        SpringApplication.run(EXE201Application.class, args);
     }
 
     @Bean
