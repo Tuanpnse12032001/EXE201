@@ -1,0 +1,19 @@
+package com.example.bds.repository;
+
+import com.example.bds.model.Comment;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.Date;
+import java.util.List;
+
+public interface CommentRepository extends JpaRepository<Comment,Integer> {
+
+    List<Comment> findByCommentTextContainingAndCommentedAt(String commentText, Date commentedAt);
+
+    List<Comment> findByCommentTextContaining(String commentText);
+
+    List<Comment> findByCommentedAt(Date commentedAt);
+
+    List<Comment> findByArtwork_ArtworkId(int artworkId);
+
+}
